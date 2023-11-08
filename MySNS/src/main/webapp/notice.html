@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/core.css">
+        <title>Hyeok's App</title>
+        <style>
+			.pad-4 { padding: 0 4px; }
+			textarea {
+				float: left;
+				width: 100%;
+				height: 160px;
+				padding: 16px;
+				box-sizing: border-box;
+				font-size: 1.0em;
+				font-family: 'Malgun Gothic', 'Arial';
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				outline: none;
+			}
+		</style>
+    </head>
+	<body>
+		<div class="page-hdr" onclick="window.location.href='main.html'">Hyeok's App</div>
+	  	<div class="page-body">
+	  		<div class="section pad-24 mtop-30">
+				  <textarea id="content" class="mtop-10" 
+				  placeholder="다음 업데이트는 2023-11-31일입니다." readonly></textarea>
+			</div>
+	  	</div>
+	  	<div class="page-footer">Copyright: mysns.com, 2023</div>
+	</body>
+</html>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/core.js"></script>
+<script>
+	$(document).ready(function() {
+        AJAX.call("jsp/session.jsp", null, function(data){
+            $("#id").val(data.trim());
+        });
+    });
+	
+	
+</script>

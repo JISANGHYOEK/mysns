@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+		<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/core.css">
+        <title>MySNS</title>
+        <style>
+			.desc {
+				float: left;
+				width: 100%;
+				color: #888;
+				font-size: 0.9em;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="page-hdr" onclick="window.location.href='main.html'">Hyeok's App</div>
+        <div class="page-body">
+            <div class="section pad-24 mtop-30">
+                <input type="text" id="id" placeholder="아이디 (이메일주소)" required>
+                <input type="text" id="ps" placeholder="비밀번호" required>
+                <input type="button" class="mtop-20" value="회원탈퇴하기" onclick="withdraw()">
+            </div>
+        </div>
+        <div class="page-footer">Copyright: mysns.com, 2023</div>
+        <script>
+            function withdraw() {
+                var id = document.getElementById('id').value;
+                var ps = document.getElementById('ps').value;
+
+                if(id && ps) {
+                    window.location.href = "withdraw2.html";
+                } else {
+                    alert("아이디와 비밀번호를 입력해주세요.");
+                }
+            }
+        </script>
+    </body>
+</html>
